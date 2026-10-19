@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Анкер — часовая мастерская</title>
+<meta name="description" content="Ремонт и реставрация механических и кварцевых часов. Гарантия до 2 лет.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;600;800&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <a class="logo" href="#top">Анкер</a>
+  <button class="burger" aria-label="Меню" aria-expanded="false"><span></span><span></span></button>
+  <nav id="nav">
+    <a href="#services">Услуги</a><a href="#calc">Стоимость</a><a href="#process">Как мы работаем</a><a href="#reviews">Отзывы</a><a href="#faq">Вопросы</a><a class="btn small" href="#book">Записаться</a>
+  </nav>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="hero-text">
+    <h1>Ваши часы снова идут точно</h1>
+    <p>Ремонт и реставрация механических и кварцевых часов. Работаем с 2009 года, диагностика бесплатная, гарантия до 2 лет.</p>
+    <div class="actions"><a class="btn" href="#book">Записаться на диагностику</a><a class="btn ghost" href="#calc">Рассчитать стоимость</a></div>
+    <ul class="facts">
+      <li><b>15 000+</b> отремонтированных часов</li>
+      <li><b>2 года</b> гарантии на механизм</li>
+      <li><b>от 1 дня</b> срок простого ремонта</li>
+    </ul>
+  </div>
+  <div class="clock-wrap" aria-label="Часы, показывающие текущее время">
+    <svg id="clock" viewBox="0 0 200 200" role="img">
+      <circle cx="100" cy="100" r="96" class="case"/>
+      <circle cx="100" cy="100" r="86" class="face"/>
+      <g id="ticks"></g>
+      <text x="100" y="64" class="brand">АНКЕР</text>
+      <text x="100" y="146" class="brand sm">с 2009</text>
+      <line id="h" x1="100" y1="100" x2="100" y2="58" class="hand hh"/>
+      <line id="m" x1="100" y1="100" x2="100" y2="34" class="hand mh"/>
+      <line id="s" x1="100" y1="112" x2="100" y2="26" class="hand sh"/>
+      <circle cx="100" cy="100" r="4" class="pin"/>
+    </svg>
+    <p class="digital" id="digital">00:00:00</p>
+  </div>
+</section>
+
+<section id="services" class="sec">
+  <h2>Что мы чиним</h2>
+  <div class="grid">
+    <article><h3>Механические часы</h3><p>Чистка, смазка, регулировка хода, замена деталей. Работаем с калибрами Швейцарии, Японии и СССР.</p></article>
+    <article><h3>Кварцевые часы</h3><p>Замена батарейки и модуля, проверка герметичности, восстановление водозащиты до 100 м.</p></article>
+    <article><h3>Корпус и стекло</h3><p>Полировка, замена сапфирового и минерального стекла, восстановление фаски и гравировки.</p></article>
+    <article><h3>Ремешки и браслеты</h3><p>Подгонка звеньев, замена застёжек, ремешки из кожи, каучука и стали под ваш размер.</p></article>
+    <article><h3>Реставрация антиквариата</h3><p>Карманные, настенные и каминные часы. Изготовим недостающие детали по образцу.</p></article>
+    <article><h3>Оценка и экспертиза</h3><p>Определим возраст, подлинность и состояние часов. Выдадим письменное заключение.</p></article>
+  </div>
+</section>
+
+<section id="calc" class="sec alt">
+  <h2>Рассчитайте стоимость</h2>
+  <div class="calc">
+    <div class="calc-form">
+      <label>Вид работы
+        <select id="work">
+          <option value="600">Замена батарейки — 600 ₽</option>
+          <option value="900">Ремонт ремешка — 900 ₽</option>
+          <option value="1800">Замена стекла — 1 800 ₽</option>
+          <option value="4500" selected>Чистка механизма — 4 500 ₽</option>
+          <option value="12000">Полная реставрация — 12 000 ₽</option>
+        </select>
+      </label>
+      <label class="check"><input type="checkbox" id="urgent"> Срочно, за 1 день (+30%)</label>
+      <label class="check"><input type="checkbox" id="polish"> Полировка корпуса (+1 200 ₽)</label>
+      <label class="check"><input type="checkbox" id="pickup"> Курьер заберёт и вернёт часы (+500 ₽)</label>
+    </div>
+    <div class="calc-result"><span>Ориентировочная стоимость</span><strong id="total">4 500 ₽</strong><small>Точную цену назовём после бесплатной диагностики.</small></div>
+  </div>
+</section>
+
+<section id="process" class="sec">
+  <h2>Как мы работаем</h2>
+  <ol class="steps">
+    <li><h3>Приём</h3><p>Осматриваем часы при вас и фиксируем состояние в акте.</p></li>
+    <li><h3>Диагностика</h3><p>За 30 минут находим причину и называем точную цену.</p></li>
+    <li><h3>Ремонт</h3><p>Мастер разбирает механизм, чистит, меняет детали и собирает заново.</p></li>
+    <li><h3>Проверка</h3><p>Часы 48 часов идут на стенде. Измеряем ход и водозащиту.</p></li>
+    <li><h3>Выдача</h3><p>Возвращаем часы с гарантийным талоном до 2 лет.</p></li>
+  </ol>
+</section>
+
+<section id="reviews" class="sec alt">
+  <h2>Отзывы клиентов</h2>
+  <div class="grid three">
+    <blockquote><p>Дедушкины «Победа» стояли 20 лет. Теперь идут с точностью до минуты в сутки. Спасибо мастеру!</p><cite>Андрей К.</cite></blockquote>
+    <blockquote><p>Заменили стекло на Seiko за один день и аккуратно отполировали корпус. Цена совпала с расчётом на сайте.</p><cite>Марина Л.</cite></blockquote>
+    <blockquote><p>Курьер забрал часы утром, вечером позвонили с диагностикой. Очень удобно и без очередей.</p><cite>Игорь П.</cite></blockquote>
+  </div>
+</section>
+
+<section id="faq" class="sec">
+  <h2>Частые вопросы</h2>
+  <div class="faq">
+    <details><summary>Сколько длится ремонт?</summary><p>Замена батарейки или стекла занимает от часа до одного дня. Чистка механизма — 3–5 дней, реставрация — до 3 недель.</p></details>
+    <details><summary>Диагностика действительно бесплатная?</summary><p>Да. Если вы откажетесь от ремонта, вы ничего не платите.</p></details>
+    <details><summary>Какая гарантия?</summary><p>6 месяцев на замену батарейки и стекла, до 2 лет на ремонт механизма.</p></details>
+    <details><summary>Берёте ли вы часы премиум-брендов?</summary><p>Да, мы работаем с Rolex, Omega, Seiko, Tissot, Casio, а также с отечественными марками.</p></details>
+  </div>
+</section>
+
+<section id="book" class="sec book">
+  <div>
+    <h2>Запишитесь на диагностику</h2>
+    <p>Оставьте контакты, и мастер перезвонит в течение 15 минут в рабочее время.</p>
+    <address>
+      г. Москва, ул. Часовая, 12<br>
+      Пн–Сб, 10:00–20:00<br>
+      <a href="tel:+74950000000">+7 (495) 000-00-00</a><br>
+      <a href="mailto:hello@anker-watch.ru">hello@anker-watch.ru</a>
+    </address>
+  </div>
+  <form id="form" novalidate>
+    <label>Ваше имя<input name="name" required autocomplete="name"></label>
+    <label>Телефон<input name="phone" type="tel" required placeholder="+7 900 000-00-00" autocomplete="tel"></label>
+    <label>Что случилось с часами?<textarea name="msg" rows="3"></textarea></label>
+    <button class="btn" type="submit">Отправить заявку</button>
+    <p id="status" role="status"></p>
+  </form>
+</section>
+</main>
+
+<footer><span>© 2026 Мастерская «Анкер»</span><a href="#top">Наверх</a></footer>
+<script src="script.js"></script>
+</body>
+</html>
